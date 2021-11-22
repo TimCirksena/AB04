@@ -1,4 +1,4 @@
-/* Einfache Klasse, um direkt Eingaben von der Tastatur/
+package de.hsos.prog3.ab4.pong.util;/* Einfache Klasse, um direkt Eingaben von der Tastatur/
  * Konsole zu lesen. Die Methoden fangen Fehler ab und geben bei
  * falschen Eingaben "Standardwerte" zur&uuml;ck.
  * @author kleuker

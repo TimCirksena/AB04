@@ -1,4 +1,4 @@
-/* Eine schrecklich verschachtelte Klasse zur einfachen Darstellung
+package de.hsos.prog3.ab4.pong.util;/* Eine schrecklich verschachtelte Klasse zur einfachen Darstellung
  * und Verschiebung verschiedener geometrischer Objekte. Der merkwuerdige
  * Programmierstil erlaubt es, dass diese Klasse fuer Programmieranfaenger
  * wie eine Klasse aussieht. Generell wird von geschachtelten Klassen
@@ -115,8 +115,8 @@ public class Interaktionsbrett {
 
   private JFrame rahmen = new JFrame("Interaktionsbrett");
   //private static final long serialVersionUID = 1L;
-  private static final Dimension DIM = new Dimension(380,
-      500);
+  private static final Dimension DIM = new Dimension(800,
+      700);
   private JLabel meldung = new JLabel(
       "Java-untypisches Zeichenbrett",
       SwingConstants.CENTER);
