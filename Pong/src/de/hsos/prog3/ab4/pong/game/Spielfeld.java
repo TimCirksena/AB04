@@ -3,12 +3,17 @@ package de.hsos.prog3.ab4.pong.game;
 import de.hsos.prog3.ab4.pong.util.Interaktionsbrett;
 
 public class Spielfeld {
-    private final int widht = 800;
-    private final int height = 700;
+    final int widht = 800;
+    final int height = 700;
+    Rechteck spielflaeche;
 
-    public Spielfeld(int x, int y, int hoehe, int breite){
-        Rechteck rechteckGame = new Rechteck(x, y, hoehe, breite);
+
+    public Spielfeld(int x, int y, int widht, int height){
+        spielflaeche = new Rechteck(x, y, widht, height);
     }
-    public void darstellen
+
+    public void darstellen(Interaktionsbrett ib){
+        spielflaeche.darstellenRahmen(ib);
+    }
 
 }
