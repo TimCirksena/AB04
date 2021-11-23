@@ -21,36 +21,44 @@ public class Rechteck {
     }
     /* HELFERMETHODEN */
 
-    private int oben(){
+    public int oben(){
         return y;
     }
-    private int unten(){
+    public int unten(){
         return y + hoehe;
     }
-    private int links(){
+    public int links(){
         return x;
     }
-    private int rechts(){
+    public int rechts(){
         return x + breite;
     }
-    private int breite(){
+    public int breite(){
         return breite;
     }
-    private int hoehe(){
+    public int hoehe(){
         return hoehe;
     }
-    private int mitteInY(){
+    public int mitteInY(){
         return (y + breite)/2;
     }
-    private int mitteInX(){
+    public int mitteInX(){
         return (x + hoehe)/2;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x += x;
     }
 
     void verschiebe(int dx, int dy){
         y += dy;
         x += dx;
     }
-    private void verschiebeNach(int x, int y){
+    void verschiebeNach(int x, int y){
         this.y = y;
         this.x = x;
     }
@@ -69,8 +77,8 @@ public class Rechteck {
     }
 
     public void darstellenFuellen(Interaktionsbrett ib) {
-        for (int i = x; i < breite+x; i++) {
-            for (int j = y; j < breite + y; j++) {
+        for (int i = x; i < hoehe; i++) {
+            for (int j = y; j < breite; j++) {
                 ib.neuerPunkt(i, j);
             }
         }
