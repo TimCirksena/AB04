@@ -6,14 +6,12 @@ import de.hsos.prog3.ab4.pong.util.Interaktionsbrett;
 import java.awt.*;
 
 public class Rechteck {
-    private Point bottomLeft;
-    private Point topRight;
     private int x;
     private int y;
     private int breite;
     private int hoehe;
 
-    public Rechteck(int x, int y, int hoehe, int breite) {
+    public Rechteck(int x, int y, int breite,int hoehe) {
         this.breite = breite;
         this.hoehe = hoehe;
         this.x = x;
@@ -58,22 +56,15 @@ public class Rechteck {
         y += dy;
         x += dx;
     }
-    void verschiebeNach(int x, int y){
+    public void verschiebeNach(int x, int y){
         this.y = y;
         this.x = x;
     }
-    boolean uberschneidet(Rechteck other){
-        if(this.topRight.getY() < other.bottomLeft.getY() || this.bottomLeft.getY() > other.topRight.getY()){
-            return false;
-        }
-        if(this.topRight.getX() < other.bottomLeft.getX() || this.bottomLeft.getX() > other.topRight.getX()){
-            return false;
-        }
-        return true;
+    public boolean ueberschneidet(Rechteck r)  {
+        return x < r.x + r.breite && x + breite > r.x && y < r.y + r.hoehe && y + hoehe > r.y;
     }
-
     public void darstellenRahmen(Interaktionsbrett ib) {
-        ib.neuesRechteck(x, y, hoehe, breite);
+        ib.neuesRechteck(x, y, breite, hoehe);
     }
 
     public void darstellenFuellen(Interaktionsbrett ib) {
@@ -84,4 +75,7 @@ public class Rechteck {
         }
     }
 
+    public int getX() {
+        return x;
+    }
 }

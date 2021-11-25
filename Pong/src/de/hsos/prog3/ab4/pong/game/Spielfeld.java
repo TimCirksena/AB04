@@ -8,7 +8,7 @@ public class  Spielfeld {
     Rechteck spielflaeche;
 
 
-    public Spielfeld(int x, int y, int widht, int height){
+    public Spielfeld(int x, int y){
         spielflaeche = new Rechteck(x, y, widht, height);
     }
 

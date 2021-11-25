@@ -4,15 +4,15 @@ import de.hsos.prog3.ab4.pong.util.EinUndAusgabe;
 import de.hsos.prog3.ab4.pong.util.Interaktionsbrett;
 
 public class Spieler {
-    Spielfeld spielfeld;
-    Rechteck schlaeger;
+    public Spielfeld spielfeld;
+    public Rechteck schlaeger;
     int punkt;
 
 
 
     public Spieler(Spielfeld real, int x, int y) {
         spielfeld = real;
-        schlaeger = new Rechteck(x, y, (spielfeld.widht / 100), (spielfeld.height) / 10);
+        schlaeger = new Rechteck(x, y,8,70);
 
     }
 
